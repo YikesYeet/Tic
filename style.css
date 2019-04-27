@@ -13,15 +13,24 @@ body {
 }
 /*Main Container*/
 .wrapper {
-  background: var(--main-background);
-  background-size: cover;
-  background-position: 100% 100%;
   margin-left: -18px;
   margin-top: -9px;
   width:101vw;
   height:100vh;
 }
-/*Logo Container*/
+/*Blur*/
+.background-blur {
+  background: var(--main-background);
+  background-size: cover;
+  background-position: 100% 100%;
+  position: absolute;
+  margin-left: -18px;
+  margin-top: -9px;
+  width:104vw;
+  height:104vh;
+  filter:blur(4px);
+}
+/*Header Container*/
 .container-1 {
   background: rgba(0, 0, 0, calc(1 - (var(--block-brightness) / 100)));
   border-radius: 15px;
@@ -33,6 +42,26 @@ body {
   animation: fadeIn ease-in 1;
   animation-fill-mode:forwards;
   animation-duration:1s;
+}
+/*Logo Container*/
+.logo {
+  background: var(--logo);
+  background-size: cover;
+  position: relative;
+  width: 30vh;
+  height: 20vh;
+  top: 5vh;
+  margin-left: 5vw;
+  border-radius: 15px;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1.2s;
+  z-index: 1;
+}
+.logo:hover {
+  transform: scaleX(1.1);
 }
 /*Title Container*/
 .container-2 {
@@ -115,6 +144,13 @@ body {
   animation: fadeIn ease-in 1;
   animation-fill-mode:forwards;
   animation-duration:2s;
+  transition: all 0.75s;
+}
+.option:hover {
+  background: rgba(255,255,255, 0.2);
+  border-top: 0.5px solid rgba(255,255,255,0.4);
+  border-bottom: 0.5px solid rgba(255,255,255,0.4);
+
 }
 .item-1 {
   animation-delay: 1.6s;
@@ -160,6 +196,16 @@ body {
   background-position: center;
   border-radius: 10px 10px 10px 10px;
   height: 40vh;
+  transition: all 0.3s;
+}
+.container-6:hover {
+  transform: scale(1.1);
+}
+.container-6:active {
+  transform: scale(2);
+  position: relative;
+  left:-22vw;
+  top: -25vh;
 }
 /*Animations*/
 @keyframes fadeIn { from { opacity:0; transform: translateX(-100vw); } to { opacity:1; transform: translateX(0vw); } }
