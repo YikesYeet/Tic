@@ -1,0 +1,166 @@
+@import url(https://tinyurl.com/sjfonts);
+/*Variables*/
+:root {
+  --main-background: url(https://i.imgur.com/ZuCMWwm.png);
+  --logo: url(https://i.imgur.com/ZuCMWwm.png);
+  --image: url(https://i.imgur.com/ZuCMWwm.png);
+  --block-brightness: 40;
+}
+/*Body*/
+body {
+  overflow:hidden;
+  color:white;
+}
+/*Main Container*/
+.wrapper {
+  background: var(--main-background);
+  background-size: cover;
+  background-position: 100% 100%;
+  margin-left: -18px;
+  margin-top: -9px;
+  width:101vw;
+  height:100vh;
+}
+/*Logo Container*/
+.container-1 {
+  background: rgba(0, 0, 0, calc(1 - (var(--block-brightness) / 100)));
+  border-radius: 15px;
+  width:80vw;
+  height:30vh;
+  margin-left: 10vw;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+}
+/*Title Container*/
+.container-2 {
+  background: rgba(0, 0, 0, calc(1 - (var(--block-brightness) / 100)));
+  border-radius: 15px;
+  width: 80vw;
+  height: 20vh;
+  margin-top: 3vh;
+  margin-left: 10vw;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+  animation-delay: 0.75s;
+}
+/*Title*/
+.title {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Product Sans";
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 6.5vh;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:2s;
+  animation-delay: 1s;
+  pointer-events: none;
+}
+.title::selection {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*Content Container*/
+.container-3 {
+  background: rgba(0, 0, 0, calc(1 - (var(--block-brightness) / 100)));
+  border-radius: 15px;
+  width: 80vw;
+  height: 40vh;
+  margin-top: 3vh;
+  margin-left: 10vw;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:1s;
+  animation-delay: 1.5s;
+}
+/*Left Container*/
+.container-4 {
+  width: 35vw;
+  height: 40vh;
+  float: left;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:2s;
+  animation-delay: 2s;
+}
+/*Item List*/
+.option {
+  font-family: "Product Sans";
+  width: 35vw;
+  height: 2.15vw;
+  text-align: center;
+  padding-top: 1px;
+  border-top: 0.5px solid rgba(255,255,255,0.4);
+  border-bottom: 0.5px solid rgba(255,255,255,0.4);
+  border-radius: 15px;
+  opacity:0;
+  transform: translateX(-100vw);
+  animation: fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:2s;
+}
+.item-1 {
+  animation-delay: 1.6s;
+}
+.item-2 {
+  animation-delay: 1.7s;
+}
+.item-3 {
+  animation-delay: 1.8s;
+}
+.item-4 {
+  animation-delay: 1.9s;
+}
+.item-5 {
+  animation-delay: 2s;
+}
+.item-6 {
+  animation-delay: 2.1s;
+}
+.item-7 {
+  animation-delay: 2.2s;
+}
+.item-8 {
+  animation-delay: 2.3s;
+}
+/*Right Container*/
+.container-5 {
+  width: calc(34vw + 12px);
+  height: calc(33vh);
+  margin-left: 10vw;
+  float: left;
+  opacity:0;
+  transform: translateX(+100vw);
+  animation: fadeIn2 ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:2s;
+  animation-delay: 3s;
+}
+/*Image Container*/
+.container-6 {
+  background: var(--image);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 10px 10px;
+  height: 40vh;
+}
+/*Animations*/
+@keyframes fadeIn { from { opacity:0; transform: translateX(-100vw); } to { opacity:1; transform: translateX(0vw); } }
+@keyframes fadeIn2 { from { opacity:0; transform: translateX(+100vw); } to { opacity:1; transform: translateX(0vw); } }
