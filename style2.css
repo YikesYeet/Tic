@@ -1,0 +1,62 @@
+/*Variables*/
+:root {
+  --main-background: url(https://i.imgur.com/ZuCMWwm.png);
+  --logo: url(https://i.imgur.com/WCVYQDT.png);
+  --image: url(https://i.imgur.com/ZuCMWwm.png);
+  --block-brightness: 40;
+}
+/*Foundation*/
+html, body {
+  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.float {
+  float: left;
+}
+/*Main Container*/
+.wrapper {
+  padding: 0;
+  margin: 0;
+}
+.container-1 {
+  height: 30vh;
+  width: 30vw;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  background: rgba(0,0,0,0.4);
+}
+.logo {
+  background: var(--logo);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30vh;
+  width: 30vw;
+}
+.container-2 {
+  height: 30vh;
+  width: 50vw;
+  margin-top: 5vh;
+  background: rgba(0,0,0,0.4);
+}
+.container-3 {
+  height: 30vh;
+  width: 80vw;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  background: rgba(0,0,0,0.4);
+}
+.item-list {
+  height: 30vh;
+  width: 26.6vw;
+}
+.image {
+  height: 30vh;
+  width: 26.6vw;
+}
+.text {
+  height: 30vh;
+  width: 26.6vw;
+}
