@@ -1,9 +1,12 @@
 /*Variables*/
+@import url(https://tinyurl.com/sjfonts);
 :root {
   --main-background: url(https://i.imgur.com/ZuCMWwm.png);
   --logo: url(https://i.imgur.com/WCVYQDT.png);
   --image: url(https://i.imgur.com/ZuCMWwm.png);
   --block-brightness: 40;
+  --global-radius: 15px;
+  --transition-time: 0.4s;
 }
 /*Foundation*/
 html, body {
@@ -20,25 +23,36 @@ html, body {
   padding: 0;
   margin: 0;
 }
+.background-blur {
+}
 .container-1 {
-  height: 30vh;
+  height: 20vh;
   width: 30vw;
   margin-top: 5vh;
   margin-left: 10vw;
   background: rgba(0,0,0,0.4);
+  border-radius: var(--global-radius) 0px 0px var(--global-radius);
+}
+.title {
+  position: relative;
+  margin-left: -10vw;
+  margin-top: 65px;
+  pointer-events: none;
+  font-family: "Product Sans";
+}
+.title::selection {
+  background: transparent;
 }
 .logo {
-  background: var(--logo);
-  background-size: 75%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 30vh;
-  width: 30vw;
+  background: null;
+  height: 20vh;
+  width: 20vw;
 }
 .container-2 {
-  height: 30vh;
+  height: 20vh;
   width: 50vw;
   margin-top: 5vh;
+  border-radius: 0px var(--global-radius) var(--global-radius) 0px;
   background: rgba(0,0,0,0.4);
 }
 .container-3 {
@@ -47,16 +61,51 @@ html, body {
   margin-top: 5vh;
   margin-left: 10vw;
   background: rgba(0,0,0,0.4);
+  border-radius: var(--global-radius);
 }
 .item-list {
   height: 30vh;
   width: 26.6vw;
 }
+.option {
+  text-align: center;
+  color: darkred;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  height: 20px;
+  border-radius: 15px;
+  transition: all var(--transition-time);
+  margin-top: 0.5px;
+}
+.option::selection {
+  background: transparent;
+}
+.option:first-child {
+  margin-top: 0px;
+}
+.option:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
 .image {
+  background: var(--image);
+  background-size: cover;
+  border-radius: var(--global-radius);
   height: 30vh;
   width: 26.6vw;
+  transition: all var(--transition-time);
+}
+.image:hover {
+  transform: scale(1.1);
+}
+.image:active {
+  transform: scale(3);
+  position:relative;
+  top: 5vh;
 }
 .text {
   height: 30vh;
   width: 26.6vw;
+}
+.text::selection {
+  background: transparent;
 }
